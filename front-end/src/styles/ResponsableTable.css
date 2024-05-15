@@ -1,0 +1,56 @@
+/* Contenedor de la tabla con ajustes visuales y funcionales */
+.table-container {
+  margin-top: 2rem;
+  max-height: 410px;
+  overflow-y: auto;
+  border-radius: 12px; /* Bordes más redondeados para un diseño suave */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada para un efecto de profundidad */
+}
+
+/* Personalización de la barra de desplazamiento del contenedor de la tabla */
+.table-container::-webkit-scrollbar {
+  width: 10px; /* Barra más ancha */
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Pista en un color claro */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #bcbcbc; /* Pulgar en un gris medio */
+  border-radius: 10px; /* Bordes redondeados para el pulgar */
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0; /* Gris oscuro al pasar el mouse */
+}
+
+/* Estilo base para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #333; /* Texto oscuro sobre fondo claro para alto contraste */
+  border-radius: 12px; /* Bordes redondeados para la tabla */
+  background-color: #ffffff; /* Fondo claro */
+  overflow: hidden;
+}
+
+/* Estilos para las celdas y cabeceras de la tabla */
+table th, table td {
+  border-bottom: 1px solid #eaeaea; /* Línea sutil entre filas */
+  padding: 1rem; /* Más espacio para la legibilidad */
+  text-align: left;
+}
+
+/* Estilo para las cabeceras de la tabla */
+table th {
+  background-color: #f7f7f7; /* Fondo más claro para las cabeceras */
+  font-weight: 700; /* Fuente más bold para destacar */
+  color: #333; /* Texto oscuro para un buen contraste */
+}
+
+/* Alternancia de colores para las filas de la tabla */
+table tr:nth-child(even) {
+  background-color: #f0f0f0; /* Color suave para filas alternas */
+}

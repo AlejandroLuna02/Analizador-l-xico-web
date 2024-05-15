@@ -1,0 +1,83 @@
+/* Contenedor principal para el botón, centrando el botón en la página */
+.sp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Estilo del botón */
+.sparkle-button {
+  background: var(--bg, hsl(182, 70%, 50%)); /* Color de fondo inicial más vibrante */
+  margin-top: 1rem;
+  width: 30%;
+  font-size: 1.1rem; /* Tamaño de fuente un poco más grande */
+  font-weight: 600; /* Peso de la fuente más audaz */
+  border: none;
+  cursor: pointer;
+  padding: 0.9em 1.3em; /* Padding un poco más grande para mejor clickabilidad */
+  align-items: center;
+  gap: 0.25em;
+  white-space: nowrap;
+  border-radius: 25px; /* Bordes más redondeados */
+  position: relative;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Sombra más notable */
+  transition: all 0.3s ease; /* Suaviza todas las transiciones */
+}
+
+/* Estilos específicos para cuando el botón está activo */
+.sparkle-button:active {
+  transform: scale(0.95); /* Efecto de pulsación más sutil */
+}
+
+/* Estilo de los íconos dentro del botón */
+.sparkle path {
+  fill: currentColor;
+  stroke: currentColor;
+  transition: fill 0.3s, stroke 0.3s;
+}
+
+/* Animaciones para el hover sobre el botón */
+.sparkle-button:hover, .sparkle-button:focus {
+  --bg: hsl(182, 70%, 60%); /* Color de fondo más claro al pasar el ratón */
+}
+
+/* Decoración antes del botón para un efecto de capa */
+.sparkle-button:before {
+  content: "";
+  position: absolute;
+  top: -5px; right: -5px; bottom: -5px; left: -5px; /* Extiende un poco más allá del botón */
+  border: 2px solid hsl(200, 90%, 80%); /* Borde más claro y destacado */
+  border-radius: 30px; /* Aumenta el radio del borde para una curvatura más suave */
+  opacity: 0;
+  transition: opacity 0.3s, border 0.3s;
+}
+
+/* Al pasar el mouse, mostrar un borde sutil */
+.sparkle-button:hover:before {
+  opacity: 1;
+}
+
+/* Animaciones adicionales para elementos gráficos dentro del botón */
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos adicionales para otros elementos decorativos, si existen */
+.backdrop {
+  text-align: center;
+  inset: 0;
+  background: var(--bg);
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+/* Soporte para browsers que soportan :has() para interacciones más dinámicas */
+@supports (selector(:has(:is(+ *)))) {
+  body:has(button:is(:hover, :focus-visible)) {
+    --active: 1;
+    --play-state: running;
+  }
+}

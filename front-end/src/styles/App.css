@@ -1,0 +1,93 @@
+/* Estilo base del contenedor */
+#root {
+  max-width: 1280px;
+  margin: 20px auto;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra más prominente para realzar el contenedor */
+}
+
+/* Estilo del cuerpo del documento */
+body {
+  font-family: 'Open Sans', sans-serif; /* Fuente moderna y limpia */
+  background-color: #ffffff; /* Fondo blanco para mayor luminosidad */
+  color: #333; /* Color de texto oscuro para mejor contraste */
+}
+
+/* Estilo para títulos dentro del documento */
+.title {
+  font-size: 2.5rem; /* Tamaño de fuente más grande para mayor impacto */
+  font-weight: 600; /* Peso de fuente más fuerte */
+  color: #5d54a4; /* Un tono de púrpura para un cambio refrescante */
+  margin-bottom: 2.5rem;
+}
+
+/* Contenedor con diseño de columna para simplificar la estructura */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* Espaciado vertical entre elementos */
+}
+
+/* Sub-contenedores A y B adaptados al diseño de columna */
+.container-A,
+.container-B {
+  width: 80%; /* Ancho más amplio para una mejor visualización en columna */
+  padding: 2rem;
+  background-color: #f3f4f6; /* Fondo más claro y suave */
+  border-radius: 12px; /* Bordes más redondeados */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+}
+
+/* Estilo para la subida de archivos personalizada, adaptada a una visualización más prominente */
+.custum-file-upload {
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  background-color: #eaeef3; /* Fondo más suave */
+  padding: 1.5rem;
+  border-radius: 15px; /* Bordes más redondeados */
+}
+
+.custum-file-upload .icon svg {
+  height: 70px;
+  fill: #5d54a4; /* Icono en púrpura para coherencia visual */
+}
+
+.custum-file-upload .text span {
+  font-weight: 500;
+  color: #333; /* Texto oscuro para un contraste efectivo */
+}
+
+/* Área de texto en el contenedor B, con ajustes visuales para coherencia */
+.text-area-B {
+  color: #333; /* Texto oscuro para fácil lectura */
+  height: 12rem;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: #eaeef3; /* Fondo gris claro suave */
+  overflow-y: auto;
+}
+
+/* Personalización de la barra de desplazamiento para el área de texto */
+.text-area-B::-webkit-scrollbar {
+  width: 6px;
+}
+
+.text-area-B::-webkit-scrollbar-track {
+  background: #eaeef3; /* Fondo más suave para la pista */
+}
+
+.text-area-B::-webkit-scrollbar-thumb {
+  background: #5d54a4; /* Barra de desplazamiento en púrpura */
+  border-radius: 6px;
+}
+
+.text-area-B::-webkit-scrollbar-thumb:hover {
+  background: #52498a; /* Púrpura un poco más oscuro al pasar el ratón */
+}
